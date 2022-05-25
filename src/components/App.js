@@ -1,6 +1,7 @@
 import './App.css';
 import Editor from './Editor';
 import {useState, useEffect} from 'react';
+import useLocalStorage from '../hooks/localstorage';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
   const [js, setJs] = useState("");
   const [srcDoc, setSrcDoc] = useState("");
 
+  
   useEffect(() => {
     const timeout = setTimeout(() => {
         setSrcDoc(`
@@ -35,9 +37,9 @@ function App() {
   return (
     <div className="App">
       <div className="pane top-pane">
-        <Editor language="xml" display="HTML" onchange={setHtml} value={html}/>  
-        <Editor language="css" display="CSS" onchange={setCss} value={css}/>
-        <Editor language="javascript" display="JS" onchange={setJs} value={js}/>
+        <Editor language="xml" display="HTML" onchange={setHtml} value={html} />  
+        <Editor language="css" display="CSS" onchange={setCss} value={css} />
+        <Editor language="javascript" display="JS" onchange={setJs} value={js} />
       </div>
       <div className="pane">
         <iframe
