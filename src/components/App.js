@@ -4,17 +4,16 @@ import {useState, useEffect} from 'react';
 import useLocalStorage from '../hooks/localstorage';
 
 function App() {
-
-  const [html, setHtml] = useState(`<header class="panel-info">
+  const [html, setHtml] = useLocalStorage("html", `<header class="panel-info">
   <h1 class="panel-title">CodePen Clone</h1>
   <p class="panel-text">  
   </p>      
 </header>`);
-  const [css, setCss] = useState(`.panel-info {
+  const [css, setCss] = useLocalStorage("css", `.panel-info {
     margin-bottom: 50px;
     text-align: center;
   }`);
-  const [js, setJs] = useState("");
+  const [js, setJs] = useLocalStorage("js", "");
   const [srcDoc, setSrcDoc] = useState("");
 
   
