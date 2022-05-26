@@ -32,9 +32,12 @@ function App() {
     return () => clearTimeout(timeout);
   }, [html, css, js]);
 
-
+  const name=`< InCoder />`
   return (
     <div className="App">
+      <div className="heading">
+        <h2>{name}</h2>
+      </div>
       <div className="pane top-pane">
         <Editor language="xml" display="HTML" onchange={setHtml} value={html} />  
         <Editor language="css" display="CSS" onchange={setCss} value={css} />

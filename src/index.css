@@ -2,6 +2,15 @@ body {
   margin: 0;
 }
 
+.heading{
+  text-align: center;
+  background-color: hsl(225, 6%, 13%);
+  padding: .2rem;
+
+}
+.heading h2{
+  color: #fff;
+}
 .top-pane {
   background-color: hsl(225, 6%, 25%);
 }
